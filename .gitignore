@@ -1,0 +1,9 @@
+# Optional npm cache directory
+.npm
+.DS_Store
+.idea/
+cypress/videos/
+cypress/screenshots/
+tmp/
+cucumber_report/*
+node_modules/

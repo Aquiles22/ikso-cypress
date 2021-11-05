@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": [
+			"es5",
+			"dom"
+		],
+		"types": [
+			"cypress",
+			"node"
+		],
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"exclude": [
+		"node_modules"
+	  ],
+	"include": ["**/*.ts", "cypress/integration/web/example2/example2.js"]
+}

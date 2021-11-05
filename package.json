@@ -1,0 +1,36 @@
+{
+  "name": "ikea-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rm -rf cucumber_report/*",
+    "merge:reports": "node cucumber-html-report.js",
+    "run:test": "cypress run",
+    "run:qa:test": "cypress run -e TAGS='@full',configFile=qa",
+    "run:dev:test": "cypress run -e TAGS='@full',configFile=dev"
+  },
+  "author": "antonio.nunez@globant.com",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^8.7.0",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "moment": "^2.29.1",
+    "tsify": "^5.0.4"
+  },
+  "testFiles": "**/*.{feature,features}",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cucumber_report",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

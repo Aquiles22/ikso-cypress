@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://developer.android.com/large-screens",
+    "ignoreTestFiles": ["*.js", "*.ts"],
+    "chromeWebSecurity": false
+  }
+  

@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+  # Cypress container
+  cypress:
+    # the Docker image to use from https://github.com/cypress-io/cypress-docker-images
+    image: "cypress/included:8.7.0"
+    command: "cypress run -e TAGS='@full',configFile=dev --browser chrome"
+    working_dir: /e2e
+    volumes:
+      - ./:/e2e
+    
