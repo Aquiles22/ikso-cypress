@@ -114,3 +114,7 @@ $ npm run merge:reports
 ├── docker-compose.yml 
 └── package.json # Archivo instalación de Cypress. Contiene librerias y los scripts de ejecución
 ```
+
+## Authors
+
+* **Antonio Nuñez Reyna (antonio.nunez@globant.com)** - *Initial work & Contributor*
