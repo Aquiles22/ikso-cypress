@@ -1,5 +1,7 @@
-
 import { Given, And, Then} from "cypress-cucumber-preprocessor/steps";
+import { LoginPageMobile } from "../../pages/LoginPageMobile";
+
+const loginPageMobile = new LoginPageMobile();
 
 Given(
     'Se abre la pagina de prueba en {}',
@@ -17,20 +19,17 @@ Given(
 Then(
     'Entramos al menu',
     () => {
-        cy.get('button[id="devsite-hamburger-menu"]', {timeout: 4000}).should('be.visible').click();
-        cy.wait(2000)
+        loginPageMobile.openHamburgerMenu();
 });
 
 And(
     'Salimos del menu',
     () => {
-        cy.get('button[id="devsite-close-nav"]', {timeout: 4000}).should('be.visible').click();
-        cy.wait(2000)
+        loginPageMobile.closeNav();
 });
 
 And(
     'Visitamos la sección de Andoid',
     () => {
-        cy.get(':nth-child(1) > .devsite-footer-sites-link', {timeout: 4000}).should('be.visible').focus().wait(2000).click()
-        cy.wait(2000)
+        loginPageMobile.openAndroidLink();
 });
